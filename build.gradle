@@ -1,13 +1,15 @@
 buildscript {
-    ext.kotlin_version = '1.0.6'
+    ext.kotlin_version = '1.1.1'
 
     repositories {
+        mavenLocal()
         jcenter()
         mavenCentral()
     }
 
     dependencies {
         classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
+        classpath 'uk.q3c.simplycd:simplycd-lifecycle:0.7.3.19'
     }
 }
 
@@ -16,13 +18,14 @@ plugins {
     id 'org.unbroken-dome.test-sets' version '1.2.0'
     id 'maven'
     id 'maven-publish'
+    id 'groovy'
 }
 
-testSets {
-    test
-}
+ext.baseVersion = "0.0.0"
+apply plugin: 'uk.q3c.simplycd'
 
 repositories {
+    mavenLocal()
     jcenter()
     mavenCentral()
 }
@@ -38,35 +41,3 @@ ext.baseVersion = '0.0.0.1'
 sourceCompatibility = '1.8'
 apply plugin: 'kotlin'
 
-publishing {
-
-    publications {
-
-        mavenStuff(MavenPublication) {
-            from components.java
-
-            artifact sourcesJar {
-                classifier 'sources'
-            }
-
-            artifact javadocJar {
-                classifier 'javadoc'
-            }
-        }
-    }
-}
-
-task sourcesJar(type: Jar, dependsOn: classes) {
-    classifier = 'sources'
-    from sourceSets.main.allSource
-}
-
-task javadocJar(type: Jar, dependsOn: javadoc) {
-    classifier = 'javadoc'
-    from javadoc.destinationDir
-}
-
-artifacts {
-    archives sourcesJar
-    archives javadocJar
-}
