@@ -18,4 +18,9 @@ class CalculatorTest extends Specification {
         expect:
         calculator.add(2, 3) == 5
     }
+
+    def "subtract"() {
+        expect:
+        calculator.subtract(3, 2) == 1
+    }
 }
