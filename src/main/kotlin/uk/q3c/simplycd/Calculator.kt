@@ -12,6 +12,6 @@ class Calculator {
     }
 
     fun subtract(a: Int, b: Int): Int {
-        return b
+        return a - b
     }
 }
