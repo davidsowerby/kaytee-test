@@ -24,6 +24,15 @@ plugins {
 ext.baseVersion = "0.0.0"
 apply plugin: 'uk.q3c.simplycd'
 
+simplycd{
+    unitTest{
+        enabled=true
+    }
+    integrationTest{
+        enabled=true
+    }
+}
+
 repositories {
     mavenLocal()
     jcenter()
