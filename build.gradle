@@ -9,7 +9,7 @@ buildscript {
 
     dependencies {
         classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
-        classpath 'uk.q3c.simplycd:simplycd-lifecycle:0.7.3.19'
+        classpath 'uk.q3c.simplycd:simplycd-lifecycle:0.7.4.20'
     }
 }
 
