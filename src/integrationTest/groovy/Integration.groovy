@@ -26,7 +26,5 @@ class Integration extends Specification {
     def "multiply"() {
         expect:
         calculator.multiply(2, 2) == 4
-
-
     }
 }
