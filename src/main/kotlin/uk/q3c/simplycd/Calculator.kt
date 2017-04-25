@@ -16,6 +16,6 @@ class Calculator {
     }
 
     fun multiply(a: Int, b: Int): Int {
-        return a * b + 1
+        return a * b
     }
 }
