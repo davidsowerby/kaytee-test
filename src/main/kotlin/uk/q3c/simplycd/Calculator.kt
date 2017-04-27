@@ -8,7 +8,7 @@ package uk.q3c.simplycd
 class Calculator {
 
     fun add(a: Int, b: Int): Int {
-        return a + b
+        return a + b + 1
     }
 
     fun subtract(a: Int, b: Int): Int {
