@@ -20,7 +20,7 @@ class Integration extends Specification {
 
     def "subtract"() {
         expect:
-        calculator.subtract(3, 2) == 1
+        calculator.subtract(3, 2) == 10
     }
 
 //    def "multiply"() {
