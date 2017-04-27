@@ -30,7 +30,7 @@ simplycd{
         qualityGate = true
     }
     integrationTest{
-        enabled=true
+        enabled=false
         qualityGate = true
     }
 }
@@ -51,5 +51,5 @@ dependencies {
 
 sourceCompatibility = '1.8'
 
-ext.baseVersion = "0.0.2.0"
+ext.baseVersion = "0.0.3.0"
 
