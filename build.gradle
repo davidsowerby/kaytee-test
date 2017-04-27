@@ -51,5 +51,5 @@ dependencies {
 
 sourceCompatibility = '1.8'
 
-ext.baseVersion = "0.0.6.0"
+ext.baseVersion = "0.0.7.0"
 
