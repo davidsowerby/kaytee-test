@@ -1,10 +1,12 @@
+package uk.q3c.simplycd.test
+
 import spock.lang.Specification
 import uk.q3c.simplycd.Calculator
 
 /**
  * Created by David Sowerby on 21 Apr 2017
  */
-class Integration extends Specification {
+class Acceptance extends Specification {
 
     Calculator calculator
 
