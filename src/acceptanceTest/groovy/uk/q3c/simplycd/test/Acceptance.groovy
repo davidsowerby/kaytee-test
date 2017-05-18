@@ -1,10 +1,12 @@
+package uk.q3c.simplycd.test
+
 import spock.lang.Specification
 import uk.q3c.simplycd.Calculator
 
 /**
  * Created by David Sowerby on 21 Apr 2017
  */
-class Integration extends Specification {
+class Acceptance extends Specification {
 
     Calculator calculator
 
@@ -23,8 +25,8 @@ class Integration extends Specification {
         calculator.subtract(3, 2) == 1
     }
 
-//    def "multiply"() {
-//        expect:
-//        calculator.multiply(2, 2) == 4
-//    }
+    def "multiply"() {
+        expect:
+        calculator.multiply(2, 2) == 4
+    }
 }
