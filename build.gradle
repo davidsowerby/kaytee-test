@@ -1,6 +1,6 @@
 buildscript {
     ext.kotlin_version = '1.1.2-2'
-    ext.lifecycle_version = "0.9.10.52"
+    ext.lifecycle_version = "0.9.12.54"
 
     repositories {
         mavenLocal()
@@ -28,18 +28,17 @@ apply plugin: 'uk.q3c.simplycd'
 
 group = 'uk.q3c.build'
 
+
 bintray {
     user = 'dsowerby'
     dryRun = false
-    pkg {
-        version {
-            name = project.version
-        }
+    pkg{
+        licenses = ['Apache 2.0']
     }
 }
 
 simplycd {
-    baseVersion = "0.0.3.2"
+    baseVersion = "0.0.3.3"
     unitTest {
         enabled = true
         qualityGate = true
