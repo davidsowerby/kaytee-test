@@ -1,6 +1,6 @@
 buildscript {
     ext.kotlin_version = '1.1.2-2'
-    ext.lifecycle_version = "0.9.12.54"
+    ext.lifecycle_version = "0.9.13.57"
 
     repositories {
         mavenLocal()
@@ -28,17 +28,71 @@ apply plugin: 'uk.q3c.simplycd'
 
 group = 'uk.q3c.build'
 
+publishing {
+    publications {
+        mavenStuff(MavenPublication) {
+            from components.java
+
+            artifact sourcesJar {
+                classifier "sources"
+            }
+
+            artifact javadocJar {
+                classifier "javadoc"
+            }
+        }
+    }
+}
+
+
+task sourcesJar(type: Jar, dependsOn: classes) {
+    classifier = 'sources'
+    from sourceSets.main.allSource
+}
+
+task javadocJar(type: Jar, dependsOn: javadoc) {
+    classifier = 'javadoc'
+    from javadoc.destinationDir
+}
+
+artifacts {
+    archives sourcesJar
+    archives javadocJar
+}
 
 bintray {
     user = 'dsowerby'
-    dryRun = false
-    pkg{
-        licenses = ['Apache 2.0']
+    key = project.bintrayKey
+
+    publications = ['mavenStuff'] //When uploading Maven-based publication files
+    dryRun = false  //project.ext.bintrayDryRun //Whether to run this as dry-run, without deploying
+    publish = true //If version should be auto published after an upload
+    pkg {
+        repo = 'maven'
+//        userOrg = 'myorg' //An optional organization name when the repo belongs to one of the user's orgs
+        name = project.name
+        desc = "a project"
+        websiteUrl = 'https://github.com/davidsowerby/' + project.name
+        issueTrackerUrl = websiteUrl + '/issues'
+        vcsUrl = websiteUrl + '.git'
+        licenses = ['Apache-2.0']
+        labels = ['test']
+        publicDownloadNumbers = true
+        //Optional version descriptor
+        version {
+            name = project.version
+            desc = "?"
+            released = new Date()
+            //'optional, date of the version release' //2 possible values: date in the format of 'yyyy-MM-dd'T'HH:mm:ss.SSSZZ' OR a java.util.Date instance
+            mavenCentralSync {
+                sync = false //Optional (true by default). Determines whether to sync the version to Maven Central.
+            }
+        }
     }
 }
 
 simplycd {
-    baseVersion = "0.0.3.4"
+    baseVersion = "0.0.3.5"
     unitTest {
         enabled = true
         qualityGate = true
