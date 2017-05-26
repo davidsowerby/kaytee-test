@@ -27,7 +27,7 @@ apply plugin: 'uk.q3c.simplycd'
 group = 'uk.q3c.build'
 
 simplycd {
-    baseVersion = "0.0.3.8"
+    baseVersion = "0.0.3.9"
     unitTest {
         enabled = true
         qualityGate = true
@@ -50,10 +50,7 @@ simplycd {
     }
 }
 //project.logger.debug("artifacts block")
-artifacts {
-    archives sourcesJar
-    archives javadocJar
-}
+
 
 //task sourcesJar(type: Jar, dependsOn: classes) {
 //    classifier = 'sources'
