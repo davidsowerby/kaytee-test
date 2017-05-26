@@ -28,6 +28,30 @@ apply plugin: 'uk.q3c.simplycd'
 
 group = 'uk.q3c.build'
 
+simplycd {
+    baseVersion = "0.0.3.5"
+    unitTest {
+        enabled = true
+        qualityGate = true
+    }
+    integrationTest {
+        enabled = true
+        qualityGate = true
+    }
+    functionalTest {
+        enabled = true
+        qualityGate = true
+    }
+    acceptanceTest {
+        enabled = true
+        qualityGate = true
+    }
+    productionTest {
+        enabled = true
+        qualityGate = true
+    }
+}
+
 publishing {
     publications {
         mavenStuff(MavenPublication) {
@@ -91,29 +115,7 @@ bintray {
     }
 }
 
-simplycd {
-    baseVersion = "0.0.3.5"
-    unitTest {
-        enabled = true
-        qualityGate = true
-    }
-    integrationTest {
-        enabled = true
-        qualityGate = true
-    }
-    functionalTest {
-        enabled = true
-        qualityGate = true
-    }
-    acceptanceTest {
-        enabled = true
-        qualityGate = true
-    }
-    productionTest {
-        enabled = true
-        qualityGate = true
-    }
-}
+
 
 repositories {
     mavenLocal()
