@@ -27,7 +27,7 @@ apply plugin: 'uk.q3c.simplycd'
 group = 'uk.q3c.build'
 
 simplycd {
-    baseVersion = "0.0.4.0"
+    baseVersion = "0.0.4.2"
     unitTest {
         enabled = true
         qualityGate = true
