@@ -1,12 +1,11 @@
-package uk.q3c.simplycd.test
+package uk.q3c.kaytee
 
 import spock.lang.Specification
-import uk.q3c.simplycd.Calculator
 
 /**
- * Created by David Sowerby on 21 Apr 2017
+ * Created by David Sowerby on 23 Mar 2017
  */
-class Functional extends Specification {
+class CalculatorTest extends Specification {
 
     Calculator calculator
 
@@ -27,6 +26,6 @@ class Functional extends Specification {
 
     def "multiply"() {
         expect:
-        calculator.multiply(2, 2) == 4
+        calculator.multiply(7, 3) == 21
     }
 }

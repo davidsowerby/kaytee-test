@@ -1,7 +1,7 @@
 package test
 
 import spock.lang.Specification
-import uk.q3c.simplycd.Calculator
+import uk.q3c.kaytee.Calculator
 
 /**
  * Created by David Sowerby on 21 Apr 2017

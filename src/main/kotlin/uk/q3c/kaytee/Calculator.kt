@@ -1,4 +1,4 @@
-package uk.q3c.simplycd
+package uk.q3c.kaytee
 
 /**
  * Trivial test class
