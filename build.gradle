@@ -48,6 +48,10 @@ kaytee {
         enabled = true
         qualityGate = true
     }
+    release{
+        mergeToMaster=false
+        toBintray=false
+    }
 }
 //project.logger.debug("artifacts block")
 
