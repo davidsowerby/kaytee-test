@@ -45,7 +45,7 @@ kaytee {
         delegate{
             repoUserName = 'davidsowerby'
             repoName ='kaytee-test-delegate'
-            commitId = '8fea0ea7d64c2f4dcf4e647e9b2b662db5655b15'
+            commitId = 'e69805b7f501bafd3df9e2c00aea4d9dc6be8a34'
         }
     }
     acceptanceTest {
