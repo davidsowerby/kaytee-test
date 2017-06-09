@@ -41,7 +41,11 @@ kaytee {
     }
     functionalTest {
         enabled = true
-        qualityGate = true
+        delegated = true
+        delegate{
+            repoUserName = 'davidsowerby'
+            repoName ='kaytee-test-delegate'
+        }
     }
     acceptanceTest {
         enabled = true
