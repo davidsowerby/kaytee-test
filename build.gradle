@@ -28,7 +28,7 @@ group = 'uk.q3c.kaytee'
 
 kaytee {
 //    remoteRepoUserName ='davidsowerby'
-    baseVersion = "0.0.4.15"
+    baseVersion = "0.0.4.16"
     unitTest {
         enabled = true
         qualityGate = true
