@@ -1,6 +1,6 @@
 buildscript {
     ext.kotlin_version = '1.1.2-2'
-    ext.kaytee_plugin_version = "0.11.6.0"
+    ext.kaytee_plugin_version = "0.12.0.0"
 
     repositories {
         mavenLocal()
@@ -28,7 +28,7 @@ group = 'uk.q3c.kaytee'
 
 kaytee {
 //    remoteRepoUserName ='davidsowerby'
-    baseVersion = "0.0.4.16"
+    baseVersion = "0.0.5.0"
     unitTest {
         enabled = true
         qualityGate = true
@@ -46,7 +46,7 @@ kaytee {
         delegate{
             repoUserName = 'davidsowerby'
             repoName ='kaytee-test-delegate'
-            commitId = '8d541f3e82b4d82437fc430c32b3d14c64bd8483'
+            commitId = '530e700030f03aed04861c40d58bc12d3d15ed09'
         }
     }
     acceptanceTest {
@@ -62,20 +62,6 @@ kaytee {
         toBintray=false
     }
 }
-//project.logger.debug("artifacts block")
-
-
-//task sourcesJar(type: Jar, dependsOn: classes) {
-//    classifier = 'sources'
-//    from sourceSets.main.allSource
-//}
-
-//task javadocJar(type: Jar, dependsOn: javadoc) {
-//    classifier = 'javadoc'
-//    from javadoc.destinationDir
-//}
-
-
 
 
 
