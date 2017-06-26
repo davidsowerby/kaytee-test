@@ -28,7 +28,7 @@ group = 'uk.q3c.kaytee'
 
 kaytee {
     versionTag = true
-    baseVersion = "0.5.4.0"
+    baseVersion = "0.5.5.0"
     unitTest {
         enabled = true
         qualityGate = true
