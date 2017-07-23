@@ -1,6 +1,6 @@
 buildscript {
     ext.kotlin_version = '1.1.2-2'
-    ext.kaytee_plugin_version = "0.12.10.0"
+    ext.kaytee_plugin_version = "0.15.0.0"
 
     repositories {
         mavenLocal()
@@ -27,7 +27,6 @@ apply plugin: 'uk.q3c.kaytee'
 group = 'uk.q3c.kaytee'
 
 kaytee {
-    versionTag = true
     baseVersion = "0.5.6.0"
     unitTest {
         enabled = true
@@ -42,7 +41,7 @@ kaytee {
     }
     functionalTest {
         enabled = true
-        delegated = true
+        taskType = "DELEGATED"
         delegate{
             repoUserName = 'davidsowerby'
             repoName ='kaytee-test-delegate'
@@ -58,6 +57,7 @@ kaytee {
         qualityGate = true
     }
     release{
+        versionTag = true
         mergeToMaster=true
         toBintray=true
     }
