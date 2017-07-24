@@ -52,8 +52,8 @@ kaytee {
     }
     release{
         versionTag = true
-        mergeToMaster=true
-        toBintray=true
+        mergeToMaster=false
+        toBintray=false
     }
 }
 
