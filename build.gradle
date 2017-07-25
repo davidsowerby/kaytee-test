@@ -21,7 +21,7 @@ apply plugin: 'uk.q3c.kaytee'
 group = 'uk.q3c.kaytee'
 
 kaytee {
-    baseVersion = "0.6.3.0"
+    baseVersion = "0.6.4.0"
     unitTest {
         enabled = true
         qualityGate = true
